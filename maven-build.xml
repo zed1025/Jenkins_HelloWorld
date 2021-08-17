@@ -23,6 +23,9 @@
 
   <property file="${user.home}/.m2/maven.properties"/>
   <property file="maven-build.properties"/>
+	
+  <property name="tomcat" value="D:\Users\amitk\Downloads\apache-tomcat-8.5.70\apache-tomcat-8.5.70"/>
+  <property name="tomcat.deployment" value="${tomcat}/webapps"/>
 
   <property name="maven.build.finalName" value="MavenWebProject"/>
   <property name="maven.build.dir" value="target"/>
