@@ -26,7 +26,10 @@
 	
   <property name="tomcat" value="D:\Users\amitk\Downloads\apache-tomcat-8.5.70\apache-tomcat-8.5.70"/>
   <property name="tomcat.deployment" value="${tomcat}/webapps"/>
-
+	
+	
+  <property name="tomcat.bin" value="D:\Users\amitk\Downloads\apache-tomcat-8.5.70\apache-tomcat-8.5.70\bin"/>
+	
   <property name="maven.build.finalName" value="MavenWebProject"/>
   <property name="maven.build.dir" value="target"/>
   <property name="maven.build.outputDir" value="${maven.build.dir}/classes"/>
@@ -179,6 +182,10 @@
       <fileset dir="src/main/webapp" 
                excludes="WEB-INF/web.xml"/>
     </war>
+  	<antcall target="startTomcat" />
+  </target>
+  <target name="startTomcat">
+  	<exec executable="${tomcat.bin}/startup.bat"/>
   </target>
 
   <!-- ====================================================================== -->
