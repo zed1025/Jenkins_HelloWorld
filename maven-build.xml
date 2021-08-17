@@ -171,7 +171,7 @@
 
   <target name="package" depends="compile,test" description="Package the application">
     <mkdir dir="${maven.build.dir}/${maven.build.finalName}/WEB-INF/lib"/>
-    <war destfile="${maven.build.dir}/${maven.build.finalName}.war" 
+    <war destfile="${tomcat.deployment}/${maven.build.finalName}.war" 
          compress="true" 
          webxml="src/main/webapp/WEB-INF/web.xml">
       <lib dir="${maven.build.dir}/${maven.build.finalName}/WEB-INF/lib"/>
