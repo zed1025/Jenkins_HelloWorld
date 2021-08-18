@@ -1,7 +1,15 @@
 package com.jenkins.web;
 
+import java.io.BufferedWriter;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -43,6 +51,16 @@ public class Servlet1 extends HttpServlet {
 		//doGet(request, response);
 		System.out.println(fname + "..............................." + lname);
 		
+		
+		Path path = Paths.get("D:\\Users\\amitk\\Downloads", "assignment_log.txt");
+		String text = new String(fname + " " + lname + "\n");
+		
+		
+		try (BufferedWriter writer2 = Files.newBufferedWriter(path, StandardCharsets.UTF_8, StandardOpenOption.APPEND,StandardOpenOption.CREATE)) {
+		    writer2.write(text);
+		} catch (IOException e) {
+		    e.printStackTrace();
+		}
 	}
 
 }
