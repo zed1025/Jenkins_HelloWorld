@@ -182,7 +182,7 @@
       <fileset dir="src/main/webapp" 
                excludes="WEB-INF/web.xml"/>
     </war>
-  	<antcall target="startTomcat" />
+  	<!-- <antcall target="startTomcat" /> -->
   </target>
   <target name="startTomcat">
   	<exec executable="${tomcat.bin}/startup.bat"/>
