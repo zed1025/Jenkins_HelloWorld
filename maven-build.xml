@@ -82,7 +82,7 @@
            target="1.6" 
            verbose="false" 
            fork="false" 
-           source="6">
+           source="7">
       <src>
         <pathelement location="${maven.build.srcDir.0}"/>
       </src>
