@@ -53,7 +53,7 @@ public class Servlet1 extends HttpServlet {
 		
 		
 		Path path = Paths.get("D:\\Users\\amitk\\Downloads", "assignment_log.txt");
-		String text = new String("Hello " + fname + " " + lname + "\n");
+		String text = new String("How are you doing? " + fname + " " + lname + "\n");
 		
 		
 		try (BufferedWriter writer2 = Files.newBufferedWriter(path, StandardCharsets.UTF_8, StandardOpenOption.APPEND,StandardOpenOption.CREATE)) {
